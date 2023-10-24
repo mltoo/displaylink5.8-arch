@@ -4,15 +4,15 @@
 # Contributor: rhabbachi
 
 pkgname=displaylink
-pkgver=5.7
-_releasedate=2023-04
-_pkgfullver=5.7.0-61.129
+pkgver=5.8
+_releasedate=2023-08
+_pkgfullver=5.8.0-63.33
 pkgrel=1
 pkgdesc="Linux driver for DL-6xxx, DL-5xxx, DL-41xx and DL-3x00"
 arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
 url="https://www.synaptics.com/products/displaylink-graphics"
 license=('custom' 'GPL2' 'LGPL2.1')
-depends=('evdi'
+depends=('evdi<1.15.0' 'evdi>1.14.0'
          'libusb')
 makedepends=('grep' 'gawk' 'wget')
 changelog="displaylink-release-notes-${pkgver}.txt"
@@ -23,8 +23,8 @@ source=(displaylink-driver-${pkgver}.zip::https://www.synaptics.com/sites/defaul
         99-displaylink.rules
 	displaylink.service
         displaylink-sleep.sh)
-sha256sums=('807f1c203ac1e71c6f1f826493b9bb32e277f07cb2cf48537bf8cfdc68dd1515'
-            '24e6c5f72f38252bdd3eab1777c418e2490dc5f7606400baa4d956ec425e002f'
+sha256sums=('22c552ead448c80d9e8dd48a842bb511184d07a74180ac76bd89dd144ddda816'
+            'ed085ebfc0d10d7142b525d39c360e701cb60d5ac2f9276834a97cd1677eedfb'
             '2f81fea43332a62b2cf1dd47e56ea01caf1e886bcd16c3f82b18bfe148fb21a9'
             'dc41ae8a2c287fc50fdda65bad8b0ffd76726f7773c25e1b0c5b7de95cecbdb6'
             'c08a4726cf4e2f92c7cab00168ae9cc8d69d36a67c570609396a4a674934245a'
